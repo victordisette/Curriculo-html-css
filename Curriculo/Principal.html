@@ -204,7 +204,7 @@
 
         <section id="formulario-contato" class="secao-curriculo">
             <h2>Formulário de Contato</h2>
-            <form id="meu-formulario" onsubmit="validarFormulario(event)" onreset="limparFormulario()">
+            <form id="meu-formulario">
                 <fieldset>
                     <legend>Informações Pessoais</legend>
                     
@@ -323,7 +323,7 @@
         <section id="endereco">
             <center>
                 <h2>Localização</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1661.3360119726542!2d-34.83934433629763!3d-7.963230991342966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sR.%20Maria%20Do%20Carmo%20Nascimento%20Arruda-%20Rio%20Doce%20Etapa%20Um!5e0!3m2!1spt-BR!2sbr!4v1746331125766!5m2!1spt-BR!2sbr" width="1160" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6379.849001639758!2d-34.85560229814014!3d-7.958550750187222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sR.%20Maria%20Do%20Carmo%20Nascimento%20Arruda-%20Rio%20Doce!5e1!3m2!1spt-BR!2sbr!4v1746403379184!5m2!1spt-BR!2sbr" width="1160" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </center>
         </section>
 
@@ -334,27 +334,5 @@
         </footer>
     </div>
 
-    <script>
-        // Atualiza o ano no rodapé
-        document.getElementById('ano-atual').textContent = new Date().getFullYear();
-
-        // Validação do formulário
-        function validarFormulario(event) {
-            event.preventDefault();
-            // Validações adicionais podem ser adicionadas aqui
-            alert('Formulário enviado com sucesso!');
-            // document.getElementById("meu-formulario").submit();
-        }
-        
-        function limparFormulario() {
-            console.log('Formulário limpo');
-        }
-        
-        // Máscara para telefone
-        document.getElementById('telefone').addEventListener('input', function(e) {
-            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-        });
-    </script>
 </body>
 </html>
